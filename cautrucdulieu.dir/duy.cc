@@ -61,7 +61,30 @@ k->pnext = h;}
 }
 }
 }
+//them 1 node vao bat ki
+void themnode_p_vaovitribatki(LIST &l, NODE *p, int vt)
+{int n = 0;
+for (NODE *k = l.phead; k != NULL; k = k ->pnext) {
+n++;
+}
+if (l.phead = = NULL || vt = 1) { them_vao_dauDS(l, p);}
+else if (vt == n + 1)
+{them_vao_cuoiDS(l, p);}
+else { NODE *g = new NODE;
+int dem = 0
+for (NODE *k = l,phead; k != NULL; k = k->pnext) {
+dem++;
+if (dem == vt) {
+NODE *h = khoitaonode(p->data);
+h->pnext = k;
+g->pnext = h;
+break;}
+g = k;
+}
+}
+}
 
+// xuat dsch cac node
 void xuatds(LIST l)
 { for (NODE *k = l.phead; k != NULL; k = k->pnext)
 {cout << k->data;}
